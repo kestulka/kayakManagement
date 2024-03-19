@@ -2,7 +2,7 @@
 
 ## Create a kayak
 
-- **Endpoint:** `/api/kayaks`
+- **Endpoint:** `/api/kayaks/`
 - **Method:** `POST`
 - **Description:** `Creates a new kayak`
 - **Request Body:** `Include the following fields:`
@@ -17,7 +17,7 @@
 
 ## Read All Kayaks
 
-- **Endpoint:** `/api/kayaks`
+- **Endpoint:** `/api/kayaks/`
 - **Method:** `GET`
 - **Description:** Retrieves all kayaks.
 
@@ -25,7 +25,7 @@
 
 - **Endpoint:** `/api/kayaks/:kayakId`
 - **Method:** `GET`
-- **Description:** Retrieves a reservation by its ID.
+- **Description:** Retrieves a kayak by its ID.
 
 ## Update a kayak
 
@@ -52,22 +52,21 @@
 
 ## Create a Client
 
-- **Endpoint:** `/api/clients`
+- **Endpoint:** `/api/clients/`
 - **Method:** `POST`
 - **Description:** `Creates a new client`
 - **Request Body:** `Include the following fields:`
 
 ```json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
-  "phone": "+1234567890"
+  "clientName": "John Doe",
+  "clientPhone": "+1234567890"
 }
 ```
 
 ## Read All Clients
 
-- **Endpoint:** `/api/clients`
+- **Endpoint:** `/api/clients/`
 - **Method:** `GET`
 - **Description:** Retrieves all clients.
 
@@ -86,9 +85,8 @@
 
 ```json
 {
-  "name": "Updated Name",
-  "email": "updated@example.com",
-  "phone": "+9876543210"
+  "clientName": "Updated Name",
+  "clientPhone": "+9876543210"
 }
 ```
 
@@ -102,15 +100,15 @@
 
 ## Create a Reservation
 
-- **Endpoint:** `/api/reservations`
+- **Endpoint:** `/api/reservations/`
 - **Method:** `POST`
 - **Description:** `Creates a new reservation`
 - **Request Body:** `Include the following fields:`
 
 ```json
 {
-  "kayak_id": "609c6e51b0cceb001f3445e5",
-  "client_id": "609c6e51b0cceb001f3445e6",
+  "kayak_id": "65f993f454749dff575a385f",
+  "client_id": "65f9954847aa4e831b3af8da",
   "date": "2024-03-20",
   "time": "10:00"
 }
@@ -118,7 +116,7 @@
 
 ## Read All Reservations
 
-- **Endpoint:** `/api/reservations`
+- **Endpoint:** `/api/reservations/`
 - **Method:** `GET`
 - **Description:** Retrieves all reservations.
 
@@ -137,8 +135,8 @@
 
 ```json
 {
-  "kayak_id": "609f2c2b0a09fe0a3e2f6e56",
-  "client_id": "609f2c2b0a09fe0a3e2f6e57",
+  "kayak_id": "65f993f454749dff575a385f",
+  "client_id": "65f9954847aa4e831b3af8da",
   "date": "2024-03-20",
   "time": "09:00"
 }

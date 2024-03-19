@@ -11,7 +11,7 @@ module.exports = {
 async function getAllKayaks(req, res) {
   try {
     const kayaks = await Kayak.find();
-    res.josn(kayaks);
+    res.json(kayaks);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -21,8 +21,8 @@ async function getKayakById(req, res) {
   try {
     const { kayakId } = req.params;
     const kayak = await Kayak.findById(kayakId);
-    if (!client) {
-      return res.status(404).json({ message: "Client not found" });
+    if (!kayak) {
+      return res.status(404).json({ message: "Kayak not found" });
     }
     res.json(kayak);
   } catch (error) {
