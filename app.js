@@ -22,6 +22,23 @@ app.use("/api/kayaks", require("./routes/kayakRoutes"));
 
 app.use(errorHandler);
 
-app.listen(process.env.PORT, () =>
-  console.log(`server is running on port ${process.env.PORT}`),
-);
+const port = process.env.PORT || 3333;
+app.set("port", port);
+
+app.use(express.static(__dirname + "/"));
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
+app.get("/employees", (req, res) => {
+  res.sendFile(__dirname + "/employees.html");
+});
+app.get("/clients", (req, res) => {
+  res.sendFile(__dirname + "/clients.html");
+});
+
+const server = http.createServer(app);
+
+server.listen(port, () => {
+  console.log(`server is running on port ${port}`);
+});

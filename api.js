@@ -1,11 +1,6 @@
-// api.js
-
-const apiUrl = "http://localhost:3000/api";
-
-// Function to fetch all clients
 async function getAllClients() {
   try {
-    const response = await fetch(`${apiUrl}/clients`);
+    const response = await fetch("http://localhost:3000/api/clients");
     if (!response.ok) {
       throw new Error("Failed to fetch clients");
     }
@@ -15,10 +10,11 @@ async function getAllClients() {
   }
 }
 
-// Function to fetch a client by ID
 async function getClientById(clientId) {
   try {
-    const response = await fetch(`${apiUrl}/clients/${clientId}`);
+    const response = await fetch(
+      `http://localhost:3000/api/clients/${clientId}`,
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch client");
     }
@@ -27,7 +23,5 @@ async function getClientById(clientId) {
     console.error("Error fetching client:", error);
   }
 }
-
-// Add similar functions for fetching data from other controllers (e.g., reservations, kayaks)
 
 export { getAllClients, getClientById };

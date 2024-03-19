@@ -6,8 +6,7 @@ getAllClients().then((clients) => {
   console.log(clients);
 });
 
-getAllClientById().then((clients) => {
-  // Handle the retrieved clients data
-  console.log(clients);
+getClientById("clientId").then((client) => {
+  // Handle the retrieved client data
+  console.log(client);
 });
-// Similar usage for other functions like getClientById
