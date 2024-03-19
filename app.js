@@ -14,9 +14,12 @@ app.use(cors());
 app.options("*", cors());
 app.use(express.urlencoded({ extended: false }));
 
+// routes
+
 app.use("/api/reservations", require("./routes/reservationRoutes"));
 app.use("/api/clients", require("./routes/clientRoutes"));
 app.use("/api/kayaks", require("./routes/kayakRoutes"));
+
 app.use(errorHandler);
 
 app.listen(process.env.PORT, () =>
