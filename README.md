@@ -48,7 +48,7 @@
 - **Method:** `DELETE`
 - **Description:** Deletes an existing kayak.
 
-## _Clients CRUD Guide_
+# **Clients CRUD Guide**
 
 ## Create a Client
 
@@ -98,7 +98,7 @@
 - **Method:** `DELETE`
 - **Description:** Deletes an existing client.
 
-### Reservations CRUD Guide
+# **Reservations CRUD Guide**
 
 ## Create a Reservation
 
