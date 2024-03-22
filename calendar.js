@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
         textColor: "black",
       },
     ],
+    headerToolbar: {
+      left: "prev,next today",
+      center: "title",
+      right: "dayGridMonth,timeGridWeek,timeGridDay",
+    },
+    aspectRatio: 2,
     initialView: "dayGridMonth",
   });
   calendar.render();

@@ -7,6 +7,7 @@ const kayakSchema = new mongoose.Schema({
   },
   type: {
     type: String,
+    enum: ["single-seat", "double-seat", "three-seat", "four-seat"],
     required: true,
   },
   availability: {

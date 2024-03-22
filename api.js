@@ -24,8 +24,9 @@ async function fetchAndDisplayReservations() {
       const client = await clientResponse.json();
 
       reservationsHTML += `
-    <div>
-    <p>Reservation ID: ${reservation._id}</p>
+    <div class="reservation-item">
+    <h5>Reservation ID: ${reservation._id}</h5>
+  
     <ul>
       <li> Date: ${new Date(reservation.date).toLocaleDateString()}</li>
       <li> Time: ${reservation.time}</li>

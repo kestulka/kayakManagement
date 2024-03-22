@@ -1,0 +1,26 @@
+body {
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  padding: 1em;
+  margin: 0;
+}
+
+#modal-container {
+  text-align: center;
+}
+
+.reservation-item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.addReservationBtn {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-color: darkorange;
+  width: 10em;
+  height: 6em;
+  font-weight: bolder;
+}
